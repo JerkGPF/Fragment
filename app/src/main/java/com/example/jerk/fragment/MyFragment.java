@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.TextView;
 
 
 /**
@@ -26,9 +26,9 @@ public class MyFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_my, container, false);
 
-        Button btnCountTimer = (Button) view.findViewById(R.id.btnCountTimer);
+        TextView tv = (TextView) view.findViewById(R.id.tv1);
         //倒计时总时间为5S，时间防止从4s开始显示
-        MyCountTimer myCountTimer = new MyCountTimer(6000, 1000, btnCountTimer, "0",getActivity());
+        MyCountTimer myCountTimer = new MyCountTimer(6000, 1000, tv, "0",getActivity());
         myCountTimer.start();
 
 
